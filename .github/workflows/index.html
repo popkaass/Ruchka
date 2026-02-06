@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Accounts | Ruchka Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+    <!-- Шапка Apple-стиль -->
+    <header class="apple-header">
+        <div class="container">
+            <nav class="header-nav">
+                <a href="#home" class="header-logo">
+                    <img src="assets/images/logo.png" alt="MRX Store" class="logo-img" width="24" height="24">
+                    <span class="logo-text">Ruchka Store</span>
+                </a>
+                
+                <div class="desktop-menu">
+                    <a href="#home" class="nav-link">Главная</a>
+                    <a href="#shop" class="nav-link">Магазин</a>
+                    <a href="#links" class="nav-link">Ссылки</a>
+                    <a href="#contact" class="nav-link">Контакты</a>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="https://BigFizShop.t.me" target="_blank" class="btn-contact">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>В магазин</span>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="assets/images/logo-white.png" alt="MRX Store" class="logo-img" width="24" height="24">
+                    <span>Ruchka Store</span>
+                </div>
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav">
+                <a href="#home" class="mobile-nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="#shop" class="mobile-nav-link">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Магазин</span>
+                </a>
+                <a href="#links" class="mobile-nav-link">
+                    <i class="fas fa-link"></i>
+                    <span>Ссылки</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Контакты</span>
+                </a>
+                <a href="https://BigFizShop.t.me" target="_blank" class="mobile-nav-link highlight">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span>Telegram магазин</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Premium</span>
+                    <span class="hero-title-line accent">Telegram</span>
+                    <span class="hero-title-line">Accounts</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Элитные проверенные аккаунты с полной гарантией.<br>
+                    Анонимность и безопасность нового поколения.
+                </p>
+                <div class="hero-actions">
+                    <a href="#shop" class="btn-primary btn-glow">
+                        <span>Перейти в магазин</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="#links" class="btn-secondary">
+                        <i class="fas fa-bolt"></i>
+                        <span>Быстрые ссылки</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Блок с фото -->
+            <div class="hero-image-simple">
+                <img src="assets/images/telegram-premium.jpg" alt="Telegram Premium" class="phone-photo">
+                <div class="photo-overlay">
+                    <div class="overlay-content">
+                        <i class="fab fa-telegram"></i>
+                        <h3>Премиум качество</h3>
+                        <p>Только прогретые аккаунты</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок магазина -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <h2 class="section-title">Telegram Магазин</h2>
+                <p class="section-subtitle">Все актуальные аккаунты в нашем Telegram-магазине</p>
+            </div>
+            
+            <div class="shop-card">
+                <div class="shop-content">
+                    <div class="shop-info">
+                        <div class="shop-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div>
+                            <h3>BigFizShop.t.me</h3>
+                            <p class="shop-description">
+                                Весь каталог аккаунтов доступен в нашем Telegram-магазине.<br>
+                                Там вы найдете актуальные цены, описания и сможете совершить покупку.
+                            </p>
+                            <div class="shop-features">
+                                <div class="shop-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Актуальные аккаунты</span>
+                                </div>
+                                <div class="shop-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Мгновенная доставка</span>
+                                </div>
+                                <div class="shop-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Гарантия 24ч</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-action">
+                        <a href="https://BigFizShop.t.me" target="_blank" class="shop-btn btn-glow-pulse">
+                            <i class="fab fa-telegram-plane"></i>
+                            <span>Перейти в магазин</span>
+                            <div class="glow-effect"></div>
+                        </a>
+                        <p class="shop-note">
+                            <i class="fas fa-info-circle"></i>
+                            Нажмите кнопку чтобы перейти в Telegram
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок быстрых ссылок -->
+    <section class="links-section" id="links">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h2 class="section-title">Быстрые ссылки</h2>
+                <p class="section-subtitle">Все важные ссылки в одном месте</p>
+            </div>
+            
+            <div class="links-grid">
+                <!-- Ссылка 1 -->
+                <a href="https://perexooq.t.me" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Канал</h3>
+                        <p>perexooq.t.me</p>
+                        <span class="link-badge">Новости и обновления</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Ссылка 2 -->
+                <a href="https://BigFizShop.t.me" target="_blank" class="link-card highlight">
+                    <div class="link-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Магазин</h3>
+                        <p>BigFizShop.t.me</p>
+                        <span class="link-badge">Основной магазин</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Ссылка 3 -->
+                <a href="https://t.me/+iyv-0o7oVLw3OWYy" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Отзывы</h3>
+                        <p>t.me/+iyv-0o7oVLw3OWYy</p>
+                        <span class="link-badge">Отзывы клиентов</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Ссылка 4 -->
+                <a href="http://leacksellbot.t.me/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Авто-бот</h3>
+                        <p>leacksellbot.t.me</p>
+                        <span class="link-badge">Автоматическая покупка</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Ссылка 5 -->
+                <a href="http://ruchckbot.t.me/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Связь при спамблоке</h3>
+                        <p>ruchckbot.t.me</p>
+                        <span class="link-badge">Альтернативная связь</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                
+                <!-- Ссылка 6 -->
+                <a href="http://vkruchka.t.me/" target="_blank" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-user-headset"></i>
+                    </div>
+                    <div class="link-content">
+                        <h3>Связь со мной</h3>
+                        <p>vkruchka.t.me</p>
+                        <span class="link-badge">Персональная связь</span>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="links-note">
+                <i class="fas fa-lock"></i>
+                <p>Все ссылки ведут в Telegram. Для доступа необходим установленный Telegram.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2>Поддержка и связь</h2>
+                    <p>Мы всегда на связи для решения ваших вопросов</p>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="http://vkruchka.t.me/" target="_blank" class="contact-btn primary">
+                        <i class="fas fa-comment-dots"></i>
+                        <span>Написать в Telegram</span>
+                    </a>
+                    <a href="http://ruchckbot.t.me/" target="_blank" class="contact-btn secondary">
+                        <i class="fas fa-robot"></i>
+                        <span>Альтернативная связь</span>
+                    </a>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Время работы</h4>
+                            <p>10:00-22:00. сб, вс - выходной</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <h4>Скорость ответа</h4>
+                            <p>В течение 30 минут</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo-white.png" alt="MRX Store" class="logo-img" width="24" height="24">
+                        <span class="logo-text">Ruchka Store</span>
+                    </div>
+                    <p class="footer-description">
+                        Продажа премиум Telegram-аккаунтов<br>
+                        с гарантией качества и безопасности
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Основные ссылки</h4>
+                    <a href="https://BigFizShop.t.me" target="_blank" class="footer-link">
+                        <i class="fas fa-store"></i>
+                        <span>Основной магазин</span>
+                    </a>
+                    <a href="https://perexooq.t.me" target="_blank" class="footer-link">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Канал с новостями</span>
+                    </a>
+                    <a href="https://t.me/+iyv-0o7oVLw3OWYy" target="_blank" class="footer-link">
+                        <i class="fas fa-star"></i>
+                        <span>Канал с отзывами</span>
+                    </a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Связь</h4>
+                    <a href="http://vkruchka.t.me/" target="_blank" class="footer-link">
+                        <i class="fas fa-user-headset"></i>
+                        <span>Связь со мной</span>
+                    </a>
+                    <a href="http://ruchckbot.t.me/" target="_blank" class="footer-link">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>При спамблоке</span>
+                    </a>
+                    <a href="http://leacksellbot.t.me/" target="_blank" class="footer-link">
+                        <i class="fas fa-robot"></i>
+                        <span>Авто-бот</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2026 Ruchka Store.
+                </p>
+                <p class="footer-note">
+                    <i class="fas fa-lock"></i>
+                    Все транзакции защищены
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
