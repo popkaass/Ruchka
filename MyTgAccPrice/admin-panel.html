@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | MRX Store</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Боковая панель -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <img src="assets/images/logo-white.png" alt="MRX Admin" width="32" height="32">
+                    <span>Админ-панель</span>
+                </div>
+                <div class="admin-user">
+                    <i class="fas fa-user-circle"></i>
+                    <div>
+                        <strong>e373ke35.rus</strong>
+                        <small>Администратор</small>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Дашборд</span>
+                </a>
+                <a href="#accounts" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Аккаунты</span>
+                    <span class="badge" id="accountsCount">3</span>
+                </a>
+                <a href="#add" class="nav-item">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Добавить</span>
+                </a>
+                <a href="#orders" class="nav-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Заказы</span>
+                    <span class="badge">12</span>
+                </a>
+                <a href="#stats" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Статистика</span>
+                </a>
+                <a href="#settings" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Настройки</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>На сайт</span>
+                </a>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Выйти</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="admin-main">
+            <!-- Шапка -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1 id="pageTitle">Управление аккаунтами</h1>
+                    <p class="subtitle">Панель администратора MRX Store</p>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Поиск аккаунтов..." id="searchInput">
+                    </div>
+                    <button class="refresh-btn" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="add-btn" data-target="add">
+                        <i class="fas fa-plus"></i>
+                        <span>Добавить</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Дашборд -->
+            <section id="dashboard" class="dashboard-section active-section">
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: var(--gradient);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Всего аккаунтов</h3>
+                            <p class="stat-number" id="totalAccounts">3</p>
+                            <span class="stat-change">+0 за неделю</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #34C759, #30D158);">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Доступно</h3>
+                            <p class="stat-number" id="availableAccounts">2</p>
+                            <span class="stat-change">В продаже</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #FF9500, #FF9F0A);">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Общая стоимость</h3>
+                            <p class="stat-number">$547</p>
+                            <span class="stat-change">+$0 за месяц</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #FF2D55, #FF375F);">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Продажи</h3>
+                            <p class="stat-number">0</p>
+                            <span class="stat-change">За этот месяц</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-orders">
+                    <h2>Последние действия</h2>
+                    <div class="actions-list">
+                        <div class="action-item">
+                            <i class="fas fa-plus-circle success"></i>
+                            <div>
+                                <p>Добавлен аккаунт "Business Quantum"</p>
+                                <small>Сегодня, 14:30</small>
+                            </div>
+                        </div>
+                        <div class="action-item">
+                            <i class="fas fa-edit warning"></i>
+                            <div>
+                                <p>Изменён аккаунт "VIP Neon"</p>
+                                <small>Вчера, 11:15</small>
+                            </div>
+                        </div>
+                        <div class="action-item">
+                            <i class="fas fa-user-plus primary"></i>
+                            <div>
+                                <p>Новый пользователь зарегистрирован</p>
+                                <small>2 дня назад</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Управление аккаунтами -->
+            <section id="accounts" class="accounts-section">
+                <div class="section-header">
+                    <h2>Список аккаунтов</h2>
+                    <div class="section-actions">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Все</button>
+                            <button class="filter-btn" data-filter="available">Доступны</button>
+                            <button class="filter-btn" data-filter="sold">Проданы</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accounts-table-container">
+                    <table class="accounts-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Название</th>
+                                <th>Тип</th>
+                                <th>Цена</th>
+                                <th>Статус</th>
+                                <th>Дата</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accountsTableBody">
+                            <!-- Данные загружаются через JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="table-footer">
+                    <div class="pagination">
+                        <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                        <span class="page-current">Страница 1</span>
+                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="table-info">
+                        Показано <span id="shownAccounts">3</span> из <span id="totalAccountsTable">3</span> аккаунтов
+                    </div>
+                </div>
+            </section>
+
+            <!-- Добавление/редактирование -->
+            <section id="add" class="edit-section">
+                <div class="section-header">
+                    <h2 id="editFormTitle">Добавить новый аккаунт</h2>
+                </div>
+                
+                <div class="edit-form-container">
+                    <form id="accountForm" class="edit-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="editName">
+                                    <i class="fas fa-heading"></i>
+                                    Название аккаунта
+                                </label>
+                                <input type="text" id="editName" placeholder="VIP Аккаунт 'Neon'" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="editType">
+                                    <i class="fas fa-tag"></i>
+                                    Тип аккаунта
+                                </label>
+                                <select id="editType" required>
+                                    <option value="vip">VIP</option>
+                                    <option value="business">Бизнес</option>
+                                    <option value="anonymous">Анонимный</option>
+                                    <option value="premium">Премиум</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="editPrice">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Цена ($)
+                                </label>
+                                <input type="number" id="editPrice" placeholder="149" min="0" step="1" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="editStatus">
+                                    <i class="fas fa-circle"></i>
+                                    Статус
+                                </label>
+                                <select id="editStatus" required>
+                                    <option value="available">Доступен</option>
+                                    <option value="sold">Продан</option>
+                                    <option value="reserved">Зарезервирован</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="editDescription">
+                                <i class="fas fa-align-left"></i>
+                                Описание
+                            </label>
+                            <textarea id="editDescription" rows="3" placeholder="Подробное описание аккаунта..." required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="editAge">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Возраст (лет)
+                                </label>
+                                <input type="number" id="editAge" placeholder="8" min="0" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="editImage">
+                                    <i class="fas fa-image"></i>
+                                    Изображение
+                                </label>
+                                <input type="text" id="editImage" placeholder="assets/images/account-1.png">
+                                <small class="hint">Путь к файлу изображения</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="editFeatures">
+                                <i class="fas fa-star"></i>
+                                Особенности
+                            </label>
+                            <textarea id="editFeatures" rows="2" placeholder="Каждая особенность с новой строки"></textarea>
+                            <small class="hint">Каждая особенность с новой строки</small>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn" id="saveAccountBtn">
+                                <i class="fas fa-save"></i>
+                                <span>Сохранить аккаунт</span>
+                            </button>
+                            <button type="button" class="cancel-btn" id="cancelEditBtn">
+                                <i class="fas fa-times"></i>
+                                Отмена
+                            </button>
+                            <button type="button" class="clear-btn" id="clearFormBtn">
+                                <i class="fas fa-broom"></i>
+                                Очистить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Подтверждение действия</h3>
+                <button class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage">Вы уверены, что хотите удалить этот аккаунт?</p>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn confirm" id="confirmActionBtn">Подтвердить</button>
+                <button class="modal-btn cancel" id="cancelActionBtn">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
